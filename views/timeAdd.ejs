@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/main.css" rel="stylesheet" />
+    <title>Amir Project</title>
+</head>
+<body>
+    <%- include('Header') %>
+    <main class="container">
+        <form class="response" action="" method="POST" type="submit">
+            <h2>הגדרת זמן</h2>
+            <label for="Heating" >זמן חימום</label>
+            <input value="<%= item.Heating %>" class="input_form" type="number" name="Heating" min="2" required/>
+            <label for="Light_Level" >זמן אור</label>
+            <input value="<%= item.Light_Level %>" class="input_form" type="number" min="2" name="Light_Level" required/>
+            <label for="Activation">זמן הפעלה</label>
+            <input value="<%= item.Activation %>" class="input_form" type="number" name="Activation" min="2" required/>
+            <label for="Pause">זמן הפסקה</label>
+            <input value="<%= item.Pause %>" class="input_form" type="number" name="Pause" min="2" required/>
+            <button class="btn_input">שלח</button>
+        </form>
+    </main>
+    <%- include('Footer') %>
+</body>
+</html>
